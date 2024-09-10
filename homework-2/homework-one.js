@@ -12,7 +12,12 @@ document.getElementById("bank").innerHTML += pantPrice + shirtPrice + shoePrice;
 document.getElementById("addJacket").innerHTML +=
   pantPrice + shirtPrice + shoePrice + jacketPrice < bankAccount;
 
-document.getElementById("profPizza").innerHTML += (4 * 8) % 2.5;
+const totalPizzas = 4;
+const slicesPerPizza = 8;
+const studentSlicesEaten = 2.5;
+const totalSlices = totalPizzas * slicesPerPizza;
+document.getElementById("profPizza").innerHTML +=
+  "Left over: " + ((totalPizzas * slicesPerPizza) % studentSlicesEaten);
 
 let adultPrice = 12;
 let childPrice = 6;
