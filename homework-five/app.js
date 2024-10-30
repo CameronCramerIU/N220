@@ -49,7 +49,7 @@ if (notification === "1") {
         } else {
           document.getElementById(
             "story"
-          ).innerHTML += `<br>  You and Carl run and hide in two different locations. Carl hides in the basket of George Washinton's Hot Air Balloon. You hide in the janitor's closet. With the door closed you have no visual of what is going on with Carl. You can only sit helplessly as you hear the SWAT team break through the doors and windows and carry Carl away to jail. After about 5 minutes of silence, you take a peek out of the door. No one is there. As you step out, you bump into something hidden among the toilet paper. A forklift! It even has a key slot that works with your car key (good thing you remembered!). You grab the hot air balloon with the forklift and drive off into the night. <i>One Month Later.</i> You sit waiting in the visiting area of the prison, after a moment Carl, in a bright orange prison uniform, sits in the chair on the other side of the glass separator. He grabs the phone to talk to you. "Hey." You try to speak but you know if you do you will break down. Carl gives you a knowing look, "It's ok, the judge says that I could could get out of here in 5 years, 3 with good behaviour." You try to stifle your tears. "Just make me a promise... promise me when I get out of here, we are gonna go flying... maybe in a certain hot air balloon." He places his hand on the glass. You place your hand on the glass. A single tear rolls down your cheek.
+          ).innerHTML += `<br>  You and Carl run and hide in two different locations. Carl hides in the basket of George Washinton's Hot Air Balloon. You hide in the janitor's closet. With the door closed you have no visual of what is going on with Carl. You can only sit helplessly as you hear the SWAT team break through the doors and windows and carry Carl away to jail. After about 5 minutes of silence, you take a peek out of the door. No one is there. As you step out, you bump into something hidden among the toilet paper. A forklift! It even has a key slot that works with your car key (good thing you remembered!). You grab the hot air balloon with the forklift and drive off into the night. <br><i>One Month Later.</i> You sit waiting in the visiting area of the prison, after a moment Carl, in a bright orange prison uniform, sits in the chair on the other side of the glass separator. He grabs the phone to talk to you. "Hey." You try to speak but you know if you do you will break down. Carl gives you a knowing look, "It's ok, the judge says that I could could get out of here in 5 years, 3 with good behaviour." You try to stifle your tears. "Just make me a promise... promise me when I get out of here, we are gonna go flying... maybe in a certain hot air balloon." He places his hand on the glass. You place your hand on the glass. A single tear rolls down your cheek.
             <br><br><b>Ending 3 of #</b>
             <br>Thanks for playing!
             <br>Refresh the page and make different choices to get differnent endings!`;
@@ -131,7 +131,7 @@ if (notification === "1") {
         } else {
           document.getElementById(
             "story"
-          ).innerHTML += `<br>You look to Carl to see what he think you should do. He pauses for a moment to think. Let's hide in the 'Employees Only' restroom. The cops can't go in there since they aren't employees. As you and Carl run to the employee restroom, you can't help but smirk to yourself at just how genius this plan is, you made the right call pulling Carl into this plan. You and Carl make it to the restroom, once you're inside, you press your ear to the door to try to hear what is happening on the other side. You hear a SWAT raid through the museum. An officer approaches the door and you see the handle start to wiggle. You hold your breath. Suddenly a booming voice shouts "Private!". <br>A younger, shakier voice responds, "Yes, Sarge?" <br>"Can't you read? It says 'Employee's Only', we can't go in there!" <br>"Oh... uh... sorry Sarge!" <br>"Sharpen up Private! Alright everyone, the museum is clear, must've been another false alarm. Back to base!" The SWAT team leaves. You and Carl go to exit the restroom, but when you grab the handle, your heart drops. The door is locked from the outside. You and Carl try to find a way out. You try kicking the door, picking the lock, and yelling for help but nothing works. That's when you remember a lesson you learned from Disney Pixar's Finding Nemo; all drains lead to the ocean. You relay this to Carl, you both recognize that there is no other option and decide to flush yourselves down the toilet. You step in the bowl. 3. 2. 1. <i>Flush!</i> The twisting and turning tubes of the sewers make take you far away from the museum. About a minute later you are shot out of a drain into the ocean. Carl shoots out right after you. As you and Carl swim to shore, you think about how the night could have gone differently...
+          ).innerHTML += `<br>You look to Carl to see what he think you should do. He pauses for a moment to think. Let's hide in the 'Employees Only' restroom. The cops can't go in there since they aren't employees. As you and Carl run to the employee restroom, you can't help but smirk to yourself at just how genius this plan is, you made the right call pulling Carl into this plan. You and Carl make it to the restroom, once you're inside, you press your ear to the door to try to hear what is happening on the other side. You hear a SWAT raid through the museum. An officer approaches the door and you see the handle start to wiggle. You hold your breath. Suddenly a booming voice shouts "Private!". <br>A younger, shakier voice responds, "Yes, Sarge?" <br>"Can't you read? It says 'Employee's Only', we can't go in there!" <br>"Oh... uh... sorry Sarge!" <br>"Sharpen up Private! Alright everyone, the museum is clear, must've been another false alarm. Back to base!" The SWAT team leaves. You think for a moment, the Sergeant's voice sounds familiar. You snap out of it, there are bigger fish to fry. You and Carl go to exit the restroom, but when you grab the handle, your heart drops. The door is locked from the outside. You and Carl try to find a way out. You try kicking the door, picking the lock, and yelling for help but nothing works. That's when you remember a lesson you learned from Disney Pixar's Finding Nemo; all drains lead to the ocean. You relay this to Carl, you both recognize that there is no other option and decide to flush yourselves down the toilet. You step in the bowl. 3. 2. 1. <i>Flush!</i> The twisting and turning tubes of the sewers make take you far away from the museum. About a minute later you are shot out of a drain into the ocean. Carl shoots out right after you. As you and Carl swim to shore, you think about how the night could have gone differently...
            <br><br><b>Ending 9 of #</b>
             <br>Thanks for playing!
             <br>Refresh the page and make different choices to get differnent endings!`;
@@ -173,11 +173,102 @@ if (notification === "1") {
         const lockedUpAndLoaded = prompt(
           `You walk in the front door, but you don't get far. As soon as you pass the threshold of the museum, loud sirens go off, red lights flash, and a metal cage falls around you and Carl. "What is going on?" Carl asks. Then it hits you, you just walked in the front door of a highly secure museum with a gun in your pocket, of course they have senors for that. You show Carl the gun to explain the alarms. "What do we do now?" He asks. \n What do you do? \n (Enter the number of your choice) \n 1. Lock and load, you aren't going down without a fight \n 2. Throw the gun outside of the cage and surrender`
         );
+        if (lockedUpAndLoaded === "1") {
+          document.getElementById(
+            "story"
+          ).innerHTML += `<br>You draw your weapon and load it. You ready your aim. You are not going down without a fight. "Hey..." You hear Carl say. He slowly grabs the gun and takes it from you. "Remeber Mr. Miller told us, back in freshmen year of high school?" <br><i>Ten Years Ago</i> <br>"Alright class settle down." Mr. Miller says as he walks into class fifteen minutes later than usual. The smell of the expired coffee from the teachers lounge fills the room as he talks. "Today we are going to be discussing last week reading assinment. You should have finished the remaining chapters of All Quiet on th Western Front. Ok so first off..." Mr. Millers teaching fades out of your focus as you stare at the red stain on the wrist of his button up shirt. You can't quite make out what it is. Ketchup? Strawberry Jam? <br>"Psst!" Your train of thought is inturrupted. Carl, sitting to your left tries to get your attention. "Did you do the reading?" he whispers. You nod. You aren't normally a reader, but something about Erich Maria Remarque's writing style immersed you so deeply into the story that you could not put the book down until you finished it. "Can I see your answers to the homework then?"`;
+          const letCarlCheat = prompt(
+            `You draw your weapon and load it. You ready your aim. You are not going down without a fight. "Hey..." You hear Carl say. He slowly grabs the gun and takes it from you. "Remeber Mr. Miller told us, back in freshmen year of high school?" <br><i>Ten Years Ago</i> <br>"Alright class settle down." Mr. Miller says as he walks into class fifteen minutes later than usual. The smell of the expired coffee from the teachers lounge fills the room as he talks. "Today we are going to be discussing last week reading assinment. You should have finished the remaining chapters of All Quiet on th Western Front. Ok so first off..." Mr. Millers teaching fades out of your focus as you stare at the red stain on the wrist of his button up shirt. You can't quite make out what it is. Ketchup? Strawberry Jam? <br>"Psst!" Your train of thought is inturrupted. Carl, sitting to your left tries to get your attention. "Did you do the reading?" he whispers. You nod. You aren't normally a reader, but something about Erich Maria Remarque's writing style immersed you so deeply into the story that you could not put the book down until you finished it. "Can I see your answers to the homework then?" \n Do you let Carl cheat off your homework? \n(Enter the number of your choice) \n 1. Give Carl your answers \n 2. Deny Carl your answers`
+          );
+          if (letCarlCheat === "1") {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You try to covertly convey the correct answers to Carl. Consequently, you are caught, causing consequences. "Excuse me!" Mr. Miller exasperatingly exclaims."Exactly, what explains this excessive exchange?" Before you or Carl can somehow surmize a sort of safeguarding saying, Mr. Miller speaks "Save me your superfluous soliloquy! Suppose you students sought to stealthily source answers. So be it. Step not asunder, instead, sojourn here subsequent the lesson." <br>"What?" Carl asks. <br>"Stay after class." <br>After class is over, Mr. Miller calls you and Carl to his desk. "Listen, I understand you have a lot on your plate, but I can't let cheating slide. You both are going to have to serve a detention. I don't like doing this, but if you don't learn this lesson now, it may come back to bite you. You can go." As you and Carl head out of the classroom, heads hanging in shame, Mr. Miller calls out, "Oh yeah, and violence is bad." <br><i>Present Day</i> <br>Mr. Millers wise words echo in your mind. You put the gun down and await your arrest. When the SWAT team slams through the front door, the commaning Sergeant walks up to the cage. "Wait, I know these two..." He takes his helmet off, and you see none other than Mr. Miller.
+            <br><br><b>Ending 12 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+          } else {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You remember the importance of academic integrity and deny Carl the answers. Carl tries to convice you to give you the answers. His whispering gets louder a he becomes more desperate for answers. Mr. Miller stops teaching. "Carl, are you trying to cheat off of your neighbor's homework? You know that is against the rules. See me after class." <br><i>Present Day</i> <br>You look back at Carl, you tell him you don't remember what Mr. Miller said because you didn't have to stay after class. "Oh. Well he said violence is bad." You ask him how that even came up in a discussion about cheating? "I don't remember, I guess you just had to be there. That's not the point. Put the gun away." You ponder over of you should or not, but eventually those wise words take over. You put away your gun and await your arrest. <br><i>A Few Days Later</i><br> You and Carl are sitting in your jail cell when the SWAT team sergeant comes in. He is still in full SWAT gear. He doesn't say a word, he simply unlocks the cells and leaves. Why did he free us? Who was he? You and Carl would never know. Perhaps in another life, you would.
+              <br><br><b>Ending 13 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+          }
+        } else {
+          document.getElementById(
+            "story"
+          ).innerHTML += `You decide that shooting your way out isn't gonna work, nor would it be the right thing to do. You toss the gun outside the cage. As it hits the ground, the gun misfires and lets out a single round. The bullet wizzes past you and Carl and hits a hidden lever on the other side of the room. The cage lifts. You and Carl are frozen for a moment, but then come back to reality. You hear sirens in the distance and decide to not take any chances and book it out of there. You leave empty-handed, but at least you are free.
+            <br><br><b>Ending 14 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+        }
+      } else {
+        document.getElementById(
+          "story"
+        ).innerHTML += `<br>You sneak to the back entrance of the museum only to discover that the back door is locked.`;
+        const lockedBackDoorGun = prompt(
+          `You sneak to the back entrance of the museum only to discover that the back door is locked. \n What do you do? \n(Enter the number of your choice) \n 1. Try to use the gun \n 2. Look around for some way to open the door`
+        );
+        if (lockedBackDoorGun === "1") {
+          document.getElementById(
+            "story"
+          ).innerHTML += `<br>You look at the door, then your gun, then back at the door, then back at your gun. You look at Carl. He shrugs. You look back at the door. You shrug. <i>Bang!</i> You shoot the door. The bullet ricochets back and hit you. You fall to the ground. Carl jumps into action, he has a reputation for being calm under pressure, and starts to drag you away from the building. He gets you back to the car and starts to drive to a hospital. "I saw that coming a mile away..." he says. You make it to the hospital and the doctors are able to patch you up. You get that feeling again that you are forgetting something.`;
+          const hospitalForgetfulness = prompt(
+            `You look at the door, then your gun, then back at the door, then back at your gun. You look at Carl. He shrugs. You look back at the door. You shrug. Bang! You shoot the door. The bullet ricochets back and hit you. You fall to the ground. Carl jumps into action, he has a reputation for being calm under pressure, and starts to drag you away from the building. He gets you back to the car and starts to drive to a hospital. "I saw that coming a mile away..." he says. You make it to the hospital and the doctors are able to patch you up. You get that feeling again that you are forgetting something. \n What are you forgetting? \n (Enter the number of your choice) \n 1. Nothing \n 2. You left blood at the scene of the crime`
+          );
+          if (hospitalForgetfulness === "1") {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You are too tired to think about it, whatever it was probably wasn't that important anyway. The next day DNA evidence links you to the scene of the crime. You are charged and convicted with Tresspassing, Attempted Burglary, Assult with a Deadly Weapon, Destruction of Property, and Improper Use of Reserved Accessible Parking. You will spend the rest of your 20's under house arrest. Carl got away with no charges.
+            <br><br><b>Ending 15 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+          } else {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You remember that you bled all over he crime scene. You frantically call Carl and tell him to go back and clean it up. He goes right away. You don't hear from him again that night. The next morning, you wake up in your hospital bed to the sound of the news broadcast. "This just in. Late last night, potrolling SWAT officer Marcus Miller was investingating a suspicious scene by the world famous Hot Air Balloon Museum. It turned out to be a man by the name of Carl, whose last name has been withheld per his request. Carl was being a model citizen and was simply doing some volunteer janitorial work for the museum. Carl is quoted saying 'When I see an oppurtunity to help I jump on it.' Sergeant Miller was so inspired by this act of selflessness, that he too joined in on the cleanup effort. The Mayor has scheduled to give Carl and Sergeant Miller Keys to the City and a $25,000 cash prize." You get a notification on your phone. Carl just Venmo'd you $12,500. 
+            <br><br><b>Ending 16 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+          }
+        } else {
+          document.getElementById(
+            "story"
+          ).innerHTML += `<br>You Look Around to see if you can use anything in your surroundings to open the door. You and Carl each find one thing. You find a paperclip, and Carl finds a slip of paper with the number to a locksmith on it.`;
+          const clipOrSmith = prompt(
+            `You Look Around to see if you can use anything in your surroundings to open the door. You and Carl each find one thing. You find a paperclip, and Carl finds a slip of paper with the number to a locksmith on it. \n Which item do you use? \n (Enter the number of your choice) \n 1. Paperclip \n 2. Locksmith`
+          );
+          if (clipOrSmith === "1") {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You try to use the paperclip as a lockpick. You bend the clip into the needed shape and insert it into the lock. After a few minutes of attempts, your total lack of lockpicking skill has gotten you nowhere. You know what your only option is. You look at Carl and let him know your plan. You are going to postpone the heist and take a lockpicking class. So, you do just that. You sign up for and attend a lockpicking class. About three weeks into the course, you accidently bump into a fellow classmate on the way out of the door. You both drop your books. You help eachother pick one another's items up off the floor. When you stand up you make eye contact for a little longer than normal. "Hey um... what are you doing after this?" They ask. You tell them that you are free. "Do you wanna grab a coffee?" You aren't a big coffee drinker, but you accept the offer. You meet up for coffee a few hours later and really hit it off. You ask them out for a more official date. They accept. Neither of you have ever clicked with someone else quite like this before. After a year of dating, you bring them back to the cafe from your first date. You get on one knee and ask them to be your spouse. They say yes! Later that night you call Carl to invite him to the wedding. Carl does not seem pleased. "You have lost sight of the plan. When is that lockpicking class going to end?" In all the business of life, you forgot about the heist, you tell Carl that the class ended months ago. He is not pleased. "Just because this isn't important to you, doesn't mean it's not important to me! This Hot Air Balloon Heist is all I have!" You try to calm him down but that just makes him angrier. "Have a nice life!" he shouts as he hangs up the phone. Your fiance walks in and sees you with a distraught look on your face. "Are you okay?" they ask. You reassure them that you are. "Who was that on the phone?". You tell them it was a friend from a different time, when you were a different person. Months later, the wedding has finished and the outdoor reception is going perfectly. Well... almost perfectly. Even though you haven't talked in over a year, a part of you wishes Carl was here. As you are thinking about what may have been, you see something in the sky. High above the clouds, a hot air balloon floats along the horizon.
+                <br><br><b>Ending 17 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+          } else {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You take out your phone and call the number to the locksmith that Carl found. It goes straight to voicemail. "The Locksmith is currently closed. For Locksmith services, please call back during business hours. For 24/7 service, take our short 5 month class to learn lockpicking for yourself. Have a good day." And with that, any hope of opening this door disappeared. You and Carl decied to just go home. The locksmith doesn't open for hours, and that course doesn't sound life changing to say the least. On the bikeride home, you wonder what you could have done for a different outcome...
+                <br><br><b>Ending 18 of #</b>
+              <br>Thanks for playing!
+              <br>Refresh the page and make different choices to get differnent endings`;
+          }
+        }
       }
+    }
+  } else {
+    document.getElementById(
+      "story"
+    ).innerHTML += `<br>You don't know if its nerves, tiredness, or both, but you are not feeling up to going through with the heist you planned with Carl. You text back "I think I might be having second thoughts...". After a moment with no response, Carl calls you.`;
+    const carlCall = prompt(
+      `You don't know if its nerves, tiredness, or both, but you are not feeling up to going through with the heist you planned with Carl. You text back "I think I might be having second thoughts...". After a moment of silence Carl calls you. \n Do you answer? \n (Enter the number of your choice) \n 1. Answer Carl's call \n 2. Decline the call`
+    );
+    if (carlCall === "1") {
     }
   }
 } else {
-  document.getElementById("story").innerHTML +=
-    "You roll over and try fall back to sleep.";
-  // next if statement
+  document.getElementById(
+    "story"
+  ).innerHTML += `You roll over and try fall back to sleep. Y`;
 }
