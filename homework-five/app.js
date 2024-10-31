@@ -742,7 +742,15 @@ if (notification === "1") {
         if (toolChoiceStopHeist === "1") {
           document.getElementById(
             "story"
-          ).innerHTML += `<br>Keys! You grab your car keys, hop in your car, and drive to the Hot Air Balloon Mueseum. Carl is already there when you arrive. `;
+          ).innerHTML += `<br>Keys! You grab your car keys, hop in your car, and drive to the Hot Air Balloon Mueseum. Carl is already there when you arrive. He is about to greet you when he sees the look on youre face. You mean to thwart his scheme.`;
+          const stopHeistKey = prompt(
+            `Keys! You grab your car keys, hop in your car, and drive to the Hot Air Balloon Mueseum. Carl is already there when you arrive. He is about to greet you when he sees the look on youre face. You mean to thwart his scheme. \n How do you try to stop him? \n(Enter the number of your answer) \n 1. Talk him out of it \n 2. Use your car keys`
+          );
+          if (stopHeistKey === "1") {
+            document.getElementById(
+              "story"
+            ).innerHTML += `<br>You step out of your car and approach him. You roll over and try fall back to sleep. <br><i>This choose your own adventure is work in progress. This decision branch is currently unfinished. <br>However, there are 30+ endings to find through over 50 routes. <br> Refresh the page and choose different options for a different outcome.</i>`;
+          }
         }
       }
     }
@@ -750,5 +758,5 @@ if (notification === "1") {
 } else {
   document.getElementById(
     "story"
-  ).innerHTML += `You roll over and try fall back to sleep. Y`;
+  ).innerHTML += `You roll over and try fall back to sleep. <br><i>This choose your own adventure is work in progress. This decision branch is currently unfinished. <br>There are a few unfinshed branches that do not have this disclaimer. <br>If you run out of choices, but do not see an numbered end screen (i.e. 'Ending # of #'), you have chosen an unfinished decision branch. <br> Refresh the page and choose different options for a different outcome. <br>There are Currently, there are <b>30+ endings</b> to find through <b>over 50 routes</b>. Have fun! </i>`;
 }
