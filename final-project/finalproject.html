@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quest Log</title>
+  </head>
+  <body>
+    <h1 id="title">Quest Log</h1>
+    <h2 id="loginHeader">Log In</h2>
+    <h3 id="usernameLabel">Username</h3>
+    <span id="usernameSpan"><input type="text" id="username" /></span>
+    <p id="loginErrorUser" style="color: red"></p>
+    <h3 id="passwordLabel">Password</h3>
+    <span id="passwordSpan"
+      ><input type="password" id="password" /> <br
+    /></span>
+    <p id="loginErrorPass" style="color: red"></p>
+    <span id="logInButtonSpan"
+      ><button id="loginButton" value="Log In" onclick="loginValidation()">
+        Log In
+      </button></span
+    >
+
+    <h2 id="loggedInLabel"></h2>
+    <p id="questLog"></p>
+    <span id="addQuestSpan"></span>
+    <span id="logOutSpan"></span>
+    <script src="finalproject.js"></script>
+  </body>
+</html>
