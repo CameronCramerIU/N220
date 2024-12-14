@@ -103,6 +103,7 @@ function hasUppercase(str) {
   }
 }
 
+//if username
 function loginSuccess() {
   document.getElementById("loginHeader").innerHTML = "";
   document.getElementById("usernameLabel").innerHTML = "";
@@ -154,6 +155,7 @@ function logOut() {
 }
 
 let myQuests = [];
+let questID = 0;
 
 function addQuest() {
   let questDesc = prompt("New Quest:");
@@ -161,15 +163,18 @@ function addQuest() {
 
   myQuests.push({
     name: questDesc,
+    id: questID,
     user: usernameValue,
     reward: "",
     complete: false,
   });
 
+  questID++;
   showQuests();
 }
 
 let questLog = document.getElementById("questLog");
+let rewardLabel = "";
 
 function showQuests() {
   let questIndex;
@@ -177,23 +182,128 @@ function showQuests() {
   questLog.innerHTML = "";
 
   myQuests.forEach(function (quest, questIndex) {
+    if (quest.reward == "gold") {
+      rewardLabel = "Reward: Gold";
+    } else if (quest.reward == "magicItem") {
+      rewardLabel = "Reward: Magic Item";
+    } else if (quest.reward == "friendship") {
+      rewardLabel = "Reward: ...friendship?";
+    } else if (quest.reward == "goldComplete") {
+      rewardLabel = "Quest Complete: Have some gold!";
+    } else if (quest.reward == "magicItemComplete") {
+      rewardLabel = "Quest Complete: Enjoy your magic item!";
+    } else if (quest.reward == "friendshipComplete") {
+      rewardLabel =
+        "Quest Complete: The real tresure was the friends we made along the way!";
+    } else {
+      rewardLabel = "Please select an reward for when you complete your quest.";
+    }
+
     if (quest.user == usernameValue) {
-      questLog.innerHTML += `<div style="border: solid; width: 300px; margin: 4px 0; padding: 0px 10px 10px 10px;">
-    <h1>${quest.name}</h1>
-    <p id="rewardLabel">Please select a reward for when you complete your quest.</p>
-    <select onchange="updateQuests()">
-      <option value="empty">Reward</option>
+      questLog.innerHTML += `<div id="questLog${quest.id}" style="border: solid; width: 350px; margin: 4px 0; padding: 0px 10px 10px 10px;">
+    <h1 id="questName${quest.id}">${quest.name}</h1>
+    <p id="rewardLabel">${rewardLabel}</p>
+    <select id="rewardChoice${quest.id}" onchange="updateReward(${quest.id})">
+      <option value="">Reward</option>
       <option value="gold">Gold</option>
       <option value="magicItem">Magic Item</option>
       <option value="friendship">Friendship?</option>
-    </select>
-    <br><button value="Remove Quest" onclick="removeQuest()" style="background-color: lightcoral">Remove Quest</button>
-    <button value="Rename Quest" onclick="renameQuest()">Rename Quest</button
+    </select><br>
+    <br><button value="Remove Quest" onclick="removeQuest(${quest.id})" style="background-color: lightcoral">Remove Quest</button>
+    <button value="Rename Quest" onclick="renameQuest(${quest.id})" style="background-color: skyblue">Rename Quest</button>
+    <button id="completeButton${quest.id}" value ="Complete Quest" onclick="completeQuest(${quest.id})" style="background-color: mediumspringgreen">Complete Quest</button>  
     </div>`;
     }
   });
 }
 
-function updateQuests() {
-  console.log("when");
+function updateReward(questID) {
+  let questIndex;
+
+  for (let i = 0; i < myQuests.length; i++) {
+    if (myQuests[i].id === questID) {
+      questIndex = i;
+    }
+  }
+
+  myQuests[questIndex].reward = document.getElementById(
+    `rewardChoice${questIndex}`
+  ).value;
+  showQuests();
+}
+
+function renameQuest(questID) {
+  let questIndex;
+
+  for (let i = 0; i < myQuests.length; i++) {
+    if (myQuests[i].id === questID) {
+      questIndex = i;
+    }
+  }
+
+  let renamedQuest = prompt("Type new quest name here:");
+
+  if (renamedQuest !== null) {
+    myQuests[questIndex].name = renamedQuest;
+  }
+
+  showQuests();
+}
+
+function removeQuest(questID) {
+  let questIndex;
+
+  for (let i = 0; i < myQuests.length; i++) {
+    if (myQuests[i].id === questID) {
+      questIndex = i;
+    }
+  }
+
+  let removeConfirmation = confirm(
+    "Are you sure you want to remove this quest? You won't be able to undo this action."
+  );
+
+  if (removeConfirmation === true) {
+    myQuests.splice(questIndex, 1);
+  }
+
+  showQuests();
+}
+
+function completeQuest(questID) {
+  let questIndex;
+
+  for (let i = 0; i < myQuests.length; i++) {
+    if (myQuests[i].id === questID) {
+      questIndex = i;
+    }
+  }
+
+  if (myQuests[questIndex].reward == "") {
+    alert("Please select a reward before completing the quest.");
+  } else {
+    if (myQuests[questIndex].complete == false) {
+      if (myQuests[questIndex].reward == "gold") {
+        myQuests[questIndex].reward = "goldComplete";
+      } else if (myQuests[questIndex].reward == "magicItem") {
+        myQuests[questIndex].reward = "magicItemComplete";
+      } else if (myQuests[questIndex].reward == "friendship") {
+        myQuests[questIndex].reward = "friendshipComplete";
+      }
+
+      myQuests[questIndex].complete = true;
+    } else {
+      if (myQuests[questIndex].reward == "goldComplete") {
+        myQuests[questIndex].reward = "gold";
+      } else if (myQuests[questIndex].reward == "magicItemComplete") {
+        myQuests[questIndex].reward = "magicItem";
+      } else if (myQuests[questIndex].reward == "friendshipComplete") {
+        myQuests[questIndex].reward = "friendship";
+      }
+
+      myQuests[questIndex].complete = false;
+    }
+  }
+
+  showQuests();
 }
